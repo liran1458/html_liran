@@ -15,7 +15,7 @@
         <h1>My Task Board</h1>
     </header>
     <div class="container-fluid mt-3 ">
-        <div class="container-fluid d-flex justify-content-center border ">
+        <div class="container-fluid d-flex justify-content-center  ">
             <div class="brutal-subscribe ">
                 <div class="brutal-subscribe__container">
                     <div class="brutal-subscribe__header">
@@ -23,10 +23,12 @@
                         <span class="brutal-subscribe__subtitle">Describe the task and what the deadline. </span>
                     </div>
                     <form class="brutal-subscribe__form">
-                        <input type="text" class="brutal-subscribe__input" placeholder="Descrtion" required="" />
-                        <input type="date" class="brutal-subscribe__input" placeholder="" required="" />
-                        <input type="time" class="brutal-subscribe__input" placeholder="" required="" />
-                        <button type="submit" class="brutal-subscribe__button">ADD TASK</button>
+                        <input id="description" type="text" class="brutal-subscribe__input" placeholder="Description"
+                            required="" />
+                        <input id="date" type="date" class="brutal-subscribe__input" placeholder="" required="" />
+                        <input id="time" type="time" class="brutal-subscribe__input" placeholder="" required="" />
+                        <button type="submit" onclick="getTaskUserInput()" id="" class="brutal-subscribe__button">ADD
+                            TASK</button>
                     </form>
                     <div class="brutal-subscribe__decor">Dont be lazy</div>
                 </div>
@@ -37,40 +39,7 @@
             <div id="content" class="row g-4">
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
                     <div class="card p-4">
-                        <span class="card__title">Newsletter 1</span>
-                        <p class="card__content">Get existential crisis delivered straight to your inbox every week.</p>
-                        <p class="card__time">Date: 18 March 2025</p>
-                        <p class="card__time">Time: 18:08</p>
-                        <form class="card__form">
-                            <button type="button" onclick="deleteTask()" class="card__button"> finished</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card p-4">
-                        <span class="card__title">Newsletter 1</span>
-                        <p class="card__content">Get existential crisis delivered straight to your inbox every week.</p>
-                        <p class="card__time">Date: 18 March 2025</p>
-                        <p class="card__time">Time: 18:08</p>
-                        <form class="card__form">
-                            <button type="button" onclick="deleteTask()" class="card__button"> finished</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card p-4">
-                        <span class="card__title">Newsletter 1</span>
-                        <p class="card__content">Get existential crisis delivered straight to your inbox every week.</p>
-                        <p class="card__time">Date: 18 March 2025</p>
-                        <p class="card__time">Time: 18:08</p>
-                        <form class="card__form">
-                            <button type="button" onclick="deleteTask()" class="card__button"> finished</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card p-4">
-                        <span class="card__title">Newsletter 1</span>
+                        <span class="card__title">Your Task</span>
                         <p class="card__content">Get existential crisis delivered straight to your inbox every week.</p>
                         <p class="card__time">Date: 18 March 2025</p>
                         <p class="card__time">Time: 18:08</p>

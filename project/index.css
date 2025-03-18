@@ -1,5 +1,28 @@
 body {
 background-image: url(board\ image.jpg);
-font-family: monospace;
-font-size: 1.50rem;
+font-family: cursive;
+font-size: 1rem;
+
+
+}
+.card{
+
+    background-image: url(card\ background.jpg);
+    max-width: 18rem;
+    max-height: 300px; 
+    overflow-y: auto; 
+}
+
+#inputsDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    justify-content: center;
+}
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; 
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Task Board</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="bg-gray-100 flex flex-col items-center p-8">
+ 
+  <header class="text-4xl font-bold mb-6">My Task Board</header>
+  
+ 
+  <div class="w-96 bg-white shadow-lg rounded-lg p-6">
+    <label for="task" class="block text-gray-700 font-medium mb-1">Enter your task:</label>
+    <input id="description" type="text" placeholder="Your task" class="border w-full rounded mb-2 p-2">
+    
+    <label for="date" class="block text-gray-700 font-medium mb-1">Enter date:</label>
+    <input id="date" type="date" class="border w-full rounded mb-2 p-2">
+    
+    <label for="time" class="block text-gray-700 font-medium mb-1">Enter time:</label>
+    <input id="time" type="time" class="border w-full rounded mb-3 p-2">
+    
+    <button type="button" onclick="getTaskUserInput()" class="bg-blue-500 text-white py-2 px-4 rounded w-full">Add Task</button>
+  </div>
+  
+ 
+  <div id="content" class="mt-8 w-full h-full grid grid-cols-4 gap-5">
+  </div>
+  
+  
+</div>
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="dwdw.js"></script>
+</body>
+
+</html>

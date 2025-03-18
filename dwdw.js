@@ -1,5 +1,4 @@
 
-
 function Task(_description, _date, _time) {
     this.description = _description;
     this.dateToDo = _date;
@@ -67,19 +66,31 @@ function getCardTemplate(currentTask, index) {
     const { description, dateToDo, time } = currentTask;
 
     return `
-        <div class="card col-3 g-3 ">
-        <div class="card-body">
-          <h5 class="card-title"> Task To Do</h5>
-          <p class="card-text">  description : ${description}</p>
+      <div class="w-80 h-80 bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between relative group">
+        <button type="button" onclick="deleteTask(${index})"
+          class="absolute top-2 right-2 text-red-500 hidden group-hover:block transition-colors duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+  
+        <div class="mb-4 flex-grow">
+          <h2 class="text-lg font-semibold mb-2">Task To Do</h2>
+          <div class="max-h-20 overflow-y-auto">
+            <p class="text-sm text-gray-600">${description}</p>
+          </div>
         </div>
-        <div class="card-footer">
-          <small class="text-body-secondary">${dateToDo}</small>
-          <small class="text-body-secondary"> until ${time} oclock</small>
-          <button id="deleteTaskBtn" onclick="deleteTask(${index})" type="button" class="btn btn-danger"> delete task</button>
+  
+        <div class="text-left text-xs text-gray-500">
+          <p>Date: ${dateToDo}</p>
+          <p>Time: ${time}</p>
         </div>
       </div>
     `;
 }
+
+
 
 function deleteTask(index) {
     tasks.splice(index, 1);
